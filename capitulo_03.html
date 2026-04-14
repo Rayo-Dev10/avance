@@ -1,0 +1,176 @@
+<h1>Capítulo 3: Diseño Metodológico e Instrumentos de Medición</h1>
+<h2>Fundamentación metodológica del capítulo</h2>
+<p>El capítulo precedente estableció la relación conceptual entre el software IP, la comunicación institucional y la
+    construcción de paz territorial, por lo cual el presente apartado asume la tarea de traducir esa fundamentación en
+    un diseño operativo de investigación. En consecuencia, este capítulo define la ruta metodológica mediante la cual la
+    intervención será ejecutada, observada y valorada en la IES CINOC, sin anticipar resultados ni desplazar el análisis
+    hacia planos conclusivos que corresponden a secciones posteriores del trabajo.</p>
+<p>La necesidad de un diseño metodológico específico se justifica en la doble naturaleza del proyecto. Por una parte,
+    RayoCaster constituye una solución tecnológica que debe demostrar funcionamiento verificable, estabilidad de emisión
+    y fidelidad del audio en un entorno de transmisión digital. Por otra, su implementación no se agota en la dimensión
+    instrumental, debido a que la herramienta se inserta en una institución educativa que la proyecta como plataforma de
+    comunicación, laboratorio de paz y mecanismo de apropiación tecnológica. De este modo, la investigación requiere un
+    esquema capaz de medir tanto el desempeño técnico del sistema como su incorporación social en el escenario
+    institucional.</p>
+<p>En ese sentido, el capítulo operacionaliza la relación entre software IP y paz territorial a través de un diseño que
+    articula medición técnica y construcción participativa. La lógica general consiste en validar técnicamente
+    RayoCaster como arquitectura de emisión IP y, de manera complementaria, acompañar su adopción comunitaria mediante
+    procesos de participación, uso reflexivo y retroalimentación institucional. Esta articulación permite que la
+    intervención sea evaluada no solo por lo que el sistema hace, sino también por la manera en que la comunidad lo
+    incorpora como medio de expresión, información y cohesión.</p>
+<h2>Enfoque metodológico</h2>
+<p>El estudio adopta un enfoque mixto, dado que el problema de investigación exige integrar procedimientos de
+    verificación objetiva con estrategias de comprensión participativa y contextual. La dimensión técnica del proyecto
+    demanda observación controlada del comportamiento del sistema, identificación de condiciones de operación y uso de
+    instrumentos de medición que permitan verificar si la arquitectura implementada responde a los requerimientos de
+    emisión digital. A su vez, la dimensión institucional y comunitaria exige reconocer que la apropiación de una
+    herramienta tecnológica no puede reducirse a la sola disponibilidad del software, sino que depende de prácticas de
+    uso, sentidos compartidos y formas de participación situadas en la vida de la IES CINOC.</p>
+<p>El enfoque mixto no se adopta como suma de técnicas aisladas, sino como una estrategia metodológica de
+    complementariedad. El componente cuantificable y verificable se orienta a la validación técnica de RayoCaster
+    mediante diseño experimental; el componente cualitativo y participativo se orienta a la adopción comunitaria
+    mediante Investigación Acción Participativa (IAP). Ambos planos se relacionan porque el funcionamiento del sistema
+    condiciona la experiencia de uso, y la experiencia de uso, a su vez, retroalimenta los criterios de operación,
+    mejora y pertinencia institucional del sistema.</p>
+<p>Desde esta perspectiva, la investigación no entiende la intervención como un producto cerrado que se entrega a una
+    comunidad pasiva, sino como un proceso de implementación en el que el software IP debe demostrar desempeño técnico
+    y, simultáneamente, adquirir sentido práctico dentro del entorno institucional. Por ello, el enfoque mixto permite
+    abordar el objeto de estudio como una unidad compleja en la que infraestructura, operación, apropiación y finalidad
+    social se encuentran metodológicamente vinculadas.</p>
+<h2>Diseño experimental para la validación técnica</h2>
+<p>La validación técnica de RayoCaster se aborda mediante diseño experimental. Este componente tiene como finalidad
+    someter la arquitectura de emisión IP a pruebas controladas de funcionamiento para verificar si el sistema mantiene
+    condiciones operativas coherentes con una transmisión digital estable y con los requerimientos de fidelidad sonora
+    que justifican la intervención. La lógica experimental se centra en la observación sistemática del comportamiento
+    del sistema durante sesiones de emisión, a partir de protocolos previamente definidos y de registros técnicos que
+    permitan comparar el desempeño esperado con el desempeño observado.</p>
+<p>En este diseño experimental, la intervención técnica consiste en activar y operar RayoCaster bajo condiciones
+    configuradas de captura, procesamiento, envío y publicación del audio. La observación se concentra en el trayecto
+    que va desde la toma de señal en el entorno cliente, pasa por el procesamiento y transporte del flujo PCM, continúa
+    con la codificación y publicación hacia el servidor de streaming, y finaliza en la verificación de la continuidad
+    operativa y de la copia legal asociada a la sesión. El interés metodológico no reside en producir resultados
+    anticipados, sino en establecer cómo será medida la consistencia interna del sistema durante su funcionamiento.</p>
+<p>La estructura del proyecto permite reconocer que la arquitectura técnica involucra captura mediante navegador,
+    procesamiento de audio, exportación PCM, transporte por WebSocket, publicación mediante codificación externa y
+    almacenamiento de registro legal en formato de audio. En consecuencia, el diseño experimental se orienta a verificar
+    si esa cadena mantiene coherencia entre sus partes, si conserva continuidad en la transmisión y si la señal emitida
+    preserva condiciones aceptables de fidelidad para el propósito institucional de la emisora.</p>
+<p>Las dimensiones metodológicas observables del componente técnico se organizan de la siguiente manera:</p>
+<ul>
+    <li>Fidelidad: correspondencia funcional entre la señal capturada, la señal procesada y la señal publicada, con
+        atención a alteraciones perceptibles, distorsión, pérdidas audibles o degradación del contenido sonoro.</li>
+    <li>Estabilidad: capacidad del sistema para sostener la sesión de emisión sin fallos operativos durante el arranque,
+        la conexión y la permanencia en transmisión.</li>
+    <li>Continuidad del flujo: permanencia del trayecto de audio sin interrupciones no previstas entre la captura local,
+        el envío al servidor y la publicación del stream.</li>
+    <li>Consistencia de transmisión: mantenimiento de los parámetros definidos para la operación digital y
+        correspondencia entre los estados reportados por la interfaz y el comportamiento efectivo del sistema.</li>
+    <li>Trazabilidad operativa: posibilidad de dejar evidencia verificable del inicio, desarrollo y cierre de cada
+        sesión, incluyendo la generación del archivo de registro legal.</li>
+</ul>
+<p>El diseño experimental se usa para validar técnicamente RayoCaster porque la arquitectura propuesta no puede
+    justificarse solo por intención de uso o pertinencia institucional. Al tratarse de un software IP orientado a
+    emisión en vivo, la demostración metodológica de su funcionamiento exige observación estructurada de variables
+    técnicas, comparación de registros y documentación de la operación bajo condiciones controladas. De esta manera, la
+    validación técnica adquiere el carácter de prueba empírica del desempeño de la herramienta.</p>
+<h2>Investigación Acción Participativa en la IES CINOC</h2>
+<p>La adopción comunitaria de la herramienta en la IES CINOC se aborda mediante Investigación Acción Participativa
+    (IAP). Este componente responde al hecho de que una tecnología institucional de comunicación no alcanza apropiación
+    por simple disponibilidad técnica. Su integración requiere procesos de reconocimiento del contexto, construcción
+    colectiva de usos, seguimiento de la experiencia y retroalimentación continua sobre la manera en que el sistema se
+    incorpora a las dinámicas de la comunidad institucional.</p>
+<p>La elección de la Investigación Acción Participativa (IAP) es pertinente porque el proyecto no busca únicamente
+    instalar una solución tecnológica, sino convertir a RayoCaster en un medio de mediación institucional con potencial
+    para fortalecer comunicación, participación y producción sonora situada. En esa lógica, la comunidad participante no
+    ocupa un lugar externo frente al objeto, sino que interviene en la comprensión del problema, en la apropiación de la
+    herramienta y en la definición de prácticas de uso coherentes con el horizonte de paz territorial y de resiliencia
+    tecnológica que orienta el proyecto.</p>
+<p>La IAP se estructura como un proceso cíclico de diagnóstico, participación, implementación, seguimiento reflexivo y
+    retroalimentación. El diagnóstico permite reconocer percepciones, expectativas y necesidades de uso en torno a la
+    herramienta. La participación activa habilita espacios de interacción con el sistema y de construcción de criterios
+    sobre su pertinencia. La implementación concreta traslada esos aprendizajes al uso institucional de RayoCaster. El
+    seguimiento reflexivo recoge las experiencias de operación y de adopción. Finalmente, la retroalimentación reingresa
+    al proceso para ajustar prácticas, mejorar la apropiación y fortalecer el vínculo entre infraestructura tecnológica
+    y sentido comunitario.</p>
+<p>Este componente cualitativo-participativo también permite analizar la adopción de RayoCaster como proceso de sentido.
+    No se trata únicamente de identificar si la herramienta es usada, sino de comprender cómo se la reconoce dentro de
+    la IES CINOC, qué posibilidades abre para la comunicación institucional y de qué modo puede consolidarse como
+    recurso para la producción de narrativas de acompañamiento, diálogo cultural y construcción de paz. En ese marco, la
+    IAP se usa para la adopción comunitaria porque posibilita una implementación acompañada por reflexión colectiva y
+    ajuste continuo, en lugar de una incorporación unilateral o meramente técnica.</p>
+<h2>Técnicas e instrumentos de medición</h2>
+<p>Los instrumentos de medición se definen en correspondencia con la naturaleza de cada componente metodológico. En el
+    plano técnico, los instrumentos buscan registrar el comportamiento verificable del sistema durante las pruebas de
+    emisión. En el plano participativo, los instrumentos se orientan a documentar procesos de uso, apropiación,
+    percepción y retroalimentación comunitaria. La diferenciación es necesaria para preservar claridad analítica y para
+    evitar que el desempeño del sistema sea confundido con la experiencia social de adopción.</p>
+<p>Para el componente técnico, los instrumentos de medición se organizan así:</p>
+<ul>
+    <li>Protocolo de prueba técnica: documento que define condiciones de ejecución, secuencia de validación, momentos de
+        observación y criterios para revisar fidelidad, estabilidad, continuidad del flujo y consistencia de
+        transmisión.</li>
+    <li>Matriz de observación técnica: formato de registro sistemático de eventos, estados de operación, incidencias,
+        respuesta del sistema y correspondencia entre comportamiento esperado y comportamiento observado.</li>
+    <li>Registro operativo de sesión: consolidado de mensajes de estado, activación y cierre de emisión, evidencia de
+        conexión y referencia al archivo de grabación legal generado durante la operación.</li>
+    <li>Lista de chequeo de configuración y trazabilidad: instrumento para verificar coherencia entre parámetros de
+        captura, transporte y publicación, así como existencia del soporte de registro sonoro producido por el sistema.
+    </li>
+    <li>Guía de contraste de señal: instrumento orientado a comparar la señal de referencia, la señal emitida y la copia
+        legal archivada, con atención a rasgos de fidelidad, continuidad perceptible y presencia de anomalías audibles.
+    </li>
+</ul>
+<p>Para el componente participativo, los instrumentos de medición se organizan así:</p>
+<ul>
+    <li>Guía de observación de uso: instrumento para registrar dinámicas de interacción de la comunidad institucional
+        con RayoCaster durante actividades de aproximación, operación y socialización.</li>
+    <li>Diario de campo: soporte narrativo para documentar incidencias, reacciones, aprendizajes, tensiones y ajustes
+        surgidos durante la implementación participativa.</li>
+    <li>Registro de participación: formato destinado a dejar constancia de momentos de involucramiento comunitario,
+        acciones realizadas y aportes efectuados al proceso de apropiación.</li>
+    <li>Guía de entrevista semiestructurada: instrumento para explorar percepciones sobre utilidad, facilidad de
+        incorporación, sentido institucional y potencial del sistema como medio de comunicación y laboratorio de paz.
+    </li>
+    <li>Guía para espacios de discusión colectiva: instrumento de conversación orientado a recoger retroalimentación
+        sobre el uso de la herramienta, condiciones de adopción y posibilidades de mejora desde la experiencia
+        institucional.</li>
+</ul>
+<p>La función de estos instrumentos de medición no es producir resultados anticipados, sino establecer de manera
+    verificable cómo será observado cada componente del estudio. En el caso técnico, los instrumentos permiten controlar
+    la prueba experimental de RayoCaster. En el caso participativo, permiten documentar la Investigación Acción
+    Participativa (IAP) como proceso de apropiación comunitaria. Con ello se asegura que la ejecución metodológica
+    cuente con soportes diferenciados, auditables y coherentes con la naturaleza del objeto investigado.</p>
+<h2>Integración del diseño mixto</h2>
+<p>La investigación integra el diseño experimental y la Investigación Acción Participativa (IAP) dentro de una sola
+    estrategia metodológica. Esta integración parte del reconocimiento de que la intervención solo cumple su propósito
+    si el software IP funciona técnicamente y, al mismo tiempo, si la comunidad institucional lo incorpora como
+    herramienta legítima de comunicación y producción sonora. Por esta razón, ninguno de los dos componentes resulta
+    suficiente por separado. La sola validación de la arquitectura no demuestra apropiación institucional, y la sola
+    aceptación social no garantiza que la herramienta responda a los estándares funcionales requeridos para una emisora
+    digital.</p>
+<p>La articulación metodológica se da por complementariedad funcional. El diseño experimental produce evidencia sobre la
+    fidelidad y el comportamiento operativo de RayoCaster; la IAP permite observar la manera en que esa condición
+    técnica se transforma en experiencia de uso, apropiación y construcción colectiva de sentido en la IES CINOC. El
+    componente técnico ofrece condiciones de confiabilidad para la implementación; el componente participativo convierte
+    esa confiabilidad en práctica institucional significativa. Así, ambos componentes integran una sola estrategia
+    metodológica orientada a validar la herramienta en sus dimensiones tecnológica y social.</p>
+<p>La integración también supone un flujo de retroalimentación. Las observaciones técnicas informan ajustes necesarios
+    en la operación del sistema, mientras que las observaciones participativas muestran cómo esos ajustes inciden en la
+    adopción comunitaria. En consecuencia, la unidad de análisis no se limita a la aplicación aislada del software, sino
+    a la relación entre funcionamiento, uso y apropiación dentro de un entorno institucional específico. Esta relación
+    es la que permite comprender la intervención como arquitectura de emisión, práctica comunicativa y soporte para
+    procesos institucionales vinculados con la paz territorial.</p>
+<h2>Cierre metodológico</h2>
+<p>El presente diseño metodológico establece las bases para ejecutar la intervención de manera organizada y para medirla
+    mediante instrumentos diferenciados pero articulados. El enfoque mixto permite que la validación técnica de
+    RayoCaster se realice mediante diseño experimental, mientras que su adopción comunitaria en la IES CINOC se
+    desarrolla mediante Investigación Acción Participativa (IAP). De este modo, la investigación dispone de una ruta
+    clara para observar tanto la operatividad del sistema como la construcción institucional de su uso.</p>
+<p>La definición de este capítulo prepara la presentación posterior de los resultados estadísticos del instrumento
+    diagnóstico que sustenta el desarrollo tecnológico, así como la lectura ordenada de la evidencia empírica producida
+    durante la implementación. En consecuencia, la transición hacia el siguiente capítulo no implica un cierre
+    conclusivo del estudio, sino el paso desde la formulación metodológica hacia la exposición analítica de los datos e
+    indicadores que respaldan la intervención.</p>
+<div id="bridge_state_cap3" style="display:none;">ESTADO: Capítulo 3 estableció el diseño mixto y la IAP. El siguiente
+    capítulo debe presentar los resultados estadísticos del instrumento diagnóstico que fundamentan el desarrollo
+    tecnológico.</div>

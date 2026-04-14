@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <title>Tesis: Emisora Universitaria Oriente de Caldas</title>
+    <link rel="stylesheet" href="apa7-strict.css">
+    <style>
+        /* Ajustes específicos para el Índice dentro del lienzo */
+        #tabla-contenido {
+            margin-top: 2cm;
+            margin-bottom: 3cm;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2cm;
+        }
+        .toc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+        .toc-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #000;
+            margin: 0 10px;
+        }
+        .toc-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        /* Estilo de la Portada para que ocupe un espacio visual importante */
+        #portada {
+            height: 25cm; /* Aproximadamente una hoja carta */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            margin-bottom: 2cm;
+        }
+    </style>
+</head>
+<body>
+
+    <main id="document-canvas">
+        
+        <header id="portada">
+            <h1 style="margin-top: 2cm; font-size: 16pt;">EMISORA UNIVERSITARIA ORIENTE DE CALDAS: DISEÑO E IMPLEMENTACIÓN DE UNA EMISORA UNIVERSITARIA EN LÍNEA</h1>
+            
+            <div style="margin-top: 2cm;">
+                <p style="text-indent: 0;">PROYECTO DE INVESTIGACIÓN - MODALIDAD PASANTÍA</p>
+            </div>
+
+            <div style="margin-top: 2cm;">
+                <p style="text-indent: 0;"><strong>AUTOR:</strong></p>
+                <p style="text-indent: 0;">RAYO PALATIANOS</p>
+                <p style="text-indent: 0;">APRENDIZ - IES CINOC</p>
+            </div>
+
+            <div style="margin-top: auto; padding-bottom: 1cm;">
+                <p style="text-indent: 0;">INSTITUCIÓN DE EDUCACIÓN SUPERIOR CINOC</p>
+                <p style="text-indent: 0;">PENSILVANIA, CALDAS</p>
+                <p style="text-indent: 0;">2026</p>
+            </div>
+        </header>
+
+        <section id="tabla-contenido">
+            <h1 style="text-align: center; margin-bottom: 1.5cm;">Tabla de Contenido</h1>
+            <nav id="toc-entries"></nav>
+        </section>
+
+        <div id="cuerpo-tesis">
+            </div>
+
+    </main>
+
+    <script>
+        // Lista de archivos a cargar secuencialmente
+        const capitulos = [
+            'capitulo_01.html', 'capitulo_02.html', 'capitulo_03.html',
+            'capitulo_04.html', 'capitulo_05.html', 'capitulo_06.html',
+            'capitulo_07.html', 'capitulo_08.html', 'capitulo_09.html',
+            'capitulo_10.html'
+        ];
+
+        async function construirDocumento() {
+            const contenedor = document.getElementById('cuerpo-tesis');
+            const listaToc = document.getElementById('toc-entries');
+
+            for (let i = 0; i < capitulos.length; i++) {
+                try {
+                    const respuesta = await fetch(capitulos[i]);
+                    if (!respuesta.ok) continue;
+                    
+                    const contenidoHtml = await respuesta.text();
+                    const articulo = document.createElement('article');
+                    const idCap = `cap-${i + 1}`;
+                    articulo.id = idCap;
+                    articulo.innerHTML = contenidoHtml;
+                    contenedor.appendChild(articulo);
+
+                    // Extraer título para el índice
+                    const tituloH1 = articulo.querySelector('h1');
+                    if (tituloH1) {
+                        const row = document.createElement('div');
+                        row.className = 'toc-row';
+                        
+                        // Limpieza de texto (Quitar "Capítulo X:" si existe para no duplicar)
+                        const textoTitulo = tituloH1.innerText;
+                        
+                        row.innerHTML = `
+                            <a href="#${idCap}" class="toc-link">${textoTitulo}</a>
+                            <div class="toc-dots"></div>
+                            <span>${i + 1}</span>
+                        `;
+                        listaToc.appendChild(row);
+                    }
+                } catch (error) {
+                    console.error(`Error cargando el archivo: ${capitulos[i]}`, error);
+                }
+            }
+        }
+
+        window.onload = construirDocumento;
+    </script>
+</body>
+</html>

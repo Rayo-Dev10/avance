@@ -1,0 +1,30 @@
+{
+  "metadata_proyecto": {
+    "titulo": "Implementación de Arquitectura de Emisión IP (RayoCaster) como Laboratorio de Paz y Apropiación Tecnológica en la IES CINOC",
+    "autor": "Rayo Palatianos",
+    "linea_investigacion": "Social, paz y reconciliación en el territorio",
+    "ods_articulados": [
+      "ODS 4: Educación de Calidad",
+      "ODS 9: Industria, Innovación e Infraestructura",
+      "ODS 16: Paz, Justicia e Instituciones Sólidas"
+    ]
+  },
+  "parametros_facticos_restriccion": {
+    "canal_dominante": "84.55% de consumo vía IP (Web, Apps, Agregadores). La infraestructura analógica es marginal.",
+    "comportamiento_escucha": "Consumo episódico (3.3 días/semana) pero intensivo (4.04 horas/día) como actividad de acompañamiento secundario.",
+    "exigencia_tecnica": "Demanda prioritaria de alta fidelidad de sonido digital; escepticismo frente a la veracidad informativa (Media: 3.01/5.0)."
+  },
+  "nucleo_epistemologico": {
+    "problema": "La IES CINOC requiere consolidar una plataforma de comunicación oficial, pero el ecosistema actual demuestra que el 84.55% de la audiencia exige alta fidelidad técnica y consumo IP. La carencia de una infraestructura propia de enrutamiento digital limita la capacidad institucional para actuar como portavoz y laboratorio de paz en el Oriente de Caldas.",
+    "pregunta_investigacion": "¿De qué manera el diseño e implementación de una arquitectura de emisión IP de desarrollo propio (RayoCaster) en la IES CINOC democratiza la producción sonora, aportando a la resiliencia tecnológica y a la construcción de narrativas de paz en el Oriente de Caldas?",
+    "objetivos": {
+      "general": "Implementar una infraestructura de radio IP de alta fidelidad centrada en la herramienta RayoCaster para optimizar la difusión de contenidos en la IES CINOC, articulando el desarrollo tecnológico con la línea de investigación de paz territorial.",
+      "especificos": [
+        "Desarrollar la arquitectura de software (RayoCaster) que garantice la captura y el enrutamiento estable de audio hacia el servidor de streaming IP.",
+        "Estructurar un modelo de operación participativa que democratice el acceso de la comunidad estudiantil a la producción de contenidos de acompañamiento y diálogo cultural.",
+        "Validar operativamente la fidelidad del sonido digital en el flujo de transmisión para responder a las demandas empíricas de retención de la audiencia.",
+        "Vincular la operación técnica de la emisora con la difusión de iniciativas institucionales que promuevan la cohesión social y la reconciliación en la región."
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* ==========================================================================
+   CSS DE LIENZO CONTINUO - APA 7 ESTRICTO
+   ========================================================================== */
+
+:root {
+    --paper-width: 21.59cm; /* Ancho Carta obligatorio */
+    --margin-apa: 2.54cm;  /* Margen APA 7 */
+    --desktop-bg: #525659;  /* Gris oscuro tipo visor de PDF */
+}
+
+body {
+    background-color: var(--desktop-bg);
+    margin: 0;
+    padding: 2cm 0; /* Espacio estético superior e inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* El Contenedor Infinito */
+#document-canvas {
+    background-color: #ffffff;
+    width: var(--paper-width);
+    padding: var(--margin-apa);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    min-height: 100vh; /* Se expande según el contenido */
+    box-sizing: border-box;
+}
+
+/* Reglas de Texto APA 7 */
+p {
+    font-size: 12pt;
+    line-height: 2; /* Interlineado doble */
+    text-align: left;
+    text-indent: 1.27cm; /* Sangría de primera línea */
+    margin: 0;
+}
+
+h1, h2, h3 { 
+    line-height: 2; 
+    margin: 1em 0 0.5em 0; 
+    font-weight: bold; 
+}
+
+h1 { text-align: center; page-break-before: always; }
+
+/* Para impresión real: El navegador gestionará los saltos de hoja */
+@media print {
+    body { background: none; padding: 0; }
+    #document-canvas {
+        width: 100%;
+        box-shadow: none;
+        padding: 0; /* Los márgenes se configuran en el diálogo de impresión */
+    }
+}
